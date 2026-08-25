@@ -4,7 +4,7 @@ Name:{
     type:String,
     require:true
 },
-PassWord:{
+Password:{
     type:String,
     require:true 
 },
