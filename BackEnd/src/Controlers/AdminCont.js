@@ -1,7 +1,7 @@
 import AdminData from"../Models/admin.js";
 import PissaData from"../Models/Pissa.js";
 import SouseDate from"../Models/souse.js";
-
+import OrderData from"../Models/order.js";
 
 
 // this function is for loging in
@@ -59,5 +59,18 @@ export async function AddSaouse(req,res){
 }
 // this function is for reciving all orders from the database
 
+export async function GetOrder(req,res){
+    try{
+        const OrderderData= await OrderData.find();
+       if(!OrderderData){
+         res.status(200).json({message:"there is no order"})
+
+       }else{
+         res.status(200).json(OrderderData)
+       }
+    }catch(error){
+         res.status(500).json({message:"can not find the data"})
+    }
+}
 
 
