@@ -6,8 +6,8 @@ const SouseDataSchema = new mongoose.Schema({
         require:true
     },
     Price:{
-         type:String,
-        require:true
+         type:Number,
+         require:true
     }
     
 },

@@ -1,5 +1,8 @@
 import AdminData from"../Models/admin.js";
 import PissaData from"../Models/Pissa.js";
+import SouseDate from"../Models/souse.js";
+
+
 
 // this function is for loging in
  export async function Add (req , res) {
@@ -40,3 +43,18 @@ export async function Addpissa(req,res){
          res.status(500).json({message:"can not add the data"})
     }
 }
+
+// this function is for adding new souse
+
+export async function AddSaouse(req,res){
+    try{
+        const {Name,Price}=req.body;
+        const AddNewSouse= new SouseDate({Name,Price})
+        await AddNewSouse.save();
+        const NewSouseData= await SouseDate.find(); 
+        res.status(201).json(NewSouseData);
+    }catch(error){
+         res.status(500).json({message:"can not add the data"})
+    }
+}
+
