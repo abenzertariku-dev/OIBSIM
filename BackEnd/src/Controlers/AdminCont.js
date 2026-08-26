@@ -57,4 +57,7 @@ export async function AddSaouse(req,res){
          res.status(500).json({message:"can not add the data"})
     }
 }
+// this function is for reciving all orders from the database
+
+
 
