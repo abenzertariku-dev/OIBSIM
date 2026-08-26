@@ -4,6 +4,10 @@ const SouseDataSchema = new mongoose.Schema({
     Name:{
         type:String,
         require:true
+    },
+    Price:{
+         type:String,
+        require:true
     }
     
 },

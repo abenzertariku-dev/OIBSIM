@@ -31,10 +31,10 @@ export async function AdminPost (req ,res) {
 
 export async function Addpissa(req,res){
     try{
-        const {Name,Price,Discription}=res.body;
+        const {Name,Price,Discription}=req.body;
         const AddNewPIss= new PissaData({Name,Price,Discription})
-        await PissaData.save();
-        const NewPissaData=PissaData.find(); 
+        await AddNewPIss.save();
+        const NewPissaData= await PissaData.find(); 
         res.status(201).json(NewPissaData);
     }catch(error){
          res.status(500).json({message:"can not add the data"})
