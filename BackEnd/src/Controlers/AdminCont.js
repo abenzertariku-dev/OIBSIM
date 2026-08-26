@@ -62,7 +62,7 @@ export async function AddSaouse(req,res){
 export async function GetOrder(req,res){
     try{
         const OrderderData= await OrderData.find();
-       if(!OrderderData){
+       if(OrderderData.length == 0){
          res.status(200).json({message:"there is no order"})
 
        }else{
