@@ -12,6 +12,11 @@ const PissaDataSchema = new mongoose.Schema({
     Discription:{
         type:String,
         require:true
+    },
+    Image:{
+        type:String,
+        require:true
+
     }
 
 },

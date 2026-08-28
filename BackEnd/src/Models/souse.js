@@ -8,6 +8,9 @@ const SouseDataSchema = new mongoose.Schema({
     Price:{
          type:Number,
          require:true
+    },Image:{
+        type:String,
+        require:true
     }
     
 },

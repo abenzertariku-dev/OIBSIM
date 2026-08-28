@@ -34,8 +34,8 @@ export async function AdminPost (req ,res) {
 
 export async function Addpissa(req,res){
     try{
-        const {Name,Price,Discription}=req.body;
-        const AddNewPIss= new PissaData({Name,Price,Discription})
+        const {Name,Price,Discription,Image}=req.body;
+        const AddNewPIss= new PissaData({Name,Price,Discription,Image})
         await AddNewPIss.save();
         const NewPissaData= await PissaData.find(); 
         res.status(201).json(NewPissaData);
@@ -49,7 +49,7 @@ export async function Addpissa(req,res){
 export async function AddSaouse(req,res){
     try{
         const {Name,Price}=req.body;
-        const AddNewSouse= new SouseDate({Name,Price})
+        const AddNewSouse= new SouseDate({Name,Price,Image})
         await AddNewSouse.save();
         const NewSouseData= await SouseDate.find(); 
         res.status(201).json(NewSouseData);
@@ -57,6 +57,7 @@ export async function AddSaouse(req,res){
          res.status(500).json({message:"can not add the data"})
     }
 }
+
 // this function is for reciving all orders from the database
 
 export async function GetOrder(req,res){

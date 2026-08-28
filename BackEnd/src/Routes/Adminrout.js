@@ -1,5 +1,6 @@
 import express from"express";
 import { Add, AdminPost, Addpissa ,AddSaouse,GetOrder } from "../Controlers/AdminCont.js";
+import { Allpissa,AllSouse} from"../Controlers/UserCont.js";
 
 
 const AdminRequest=express.Router();
@@ -13,8 +14,8 @@ AdminRequest.get('/orders',GetOrder);
  AdminRequest.post('/souse',AddSaouse);
 // AdminRequest.delete('/pissa',);
 // AdminRequest.delete('/souse',);
-// AdminRequest.get('/pissa',);
-// AdminRequest.get('/souse',);
+   AdminRequest.get('/pissa', Allpissa);
+   AdminRequest.get('/souse', AllSouse);
 
 
 export default AdminRequest
