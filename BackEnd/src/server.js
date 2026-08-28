@@ -5,7 +5,7 @@ import AdminRequest from"./Routes/Adminrout.js";
 import { UsersRout } from "./Routes/Userrout.js";
 dotenv.config();
 const app = express();
-const Port=process.env.PORT;
+const Port=process.env.PORT || 3000;
 MongoDb()
 
 app.use(express.json());
