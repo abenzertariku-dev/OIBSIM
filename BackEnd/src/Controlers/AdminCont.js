@@ -74,4 +74,29 @@ export async function GetOrder(req,res){
     }
 }
 
+// a function for  delete a pissa 
 
+export async function Deletepissa(req,res) {
+    try{
+        const Deletpissa = await PissaData.findByIdAndDelete(req.params.id);
+      
+        res.status(200).json({message:"deleted sucssesfully"})
+
+    }catch(error){
+         res.status(500).json({message:"can not find the data"})
+    }
+}
+
+// this function is for deleteing souse
+
+
+export async function DeleteSouse(req,res) {
+    try{
+        const Deletsouse = await SouseData.findByIdAndDelete(req.params.id);
+      
+        res.status(200).json({message:"deleted sucssesfully"})
+
+    }catch(error){
+         res.status(500).json({message:"can not find the data"})
+    }
+}
