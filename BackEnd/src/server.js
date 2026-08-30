@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import dotenv from "dotenv";
 import  {MongoDb} from "./Config/Mongo.js";
 import AdminRequest from"./Routes/Adminrout.js";
@@ -8,6 +9,7 @@ const app = express();
 const Port=process.env.PORT || 3000;
 MongoDb()
 
+app.use(cors());
 app.use(express.json());
 
 app.use("/api/admin", AdminRequest)
