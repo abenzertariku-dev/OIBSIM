@@ -48,7 +48,7 @@ export async function Addpissa(req,res){
 
 export async function AddSaouse(req,res){
     try{
-        const {Name,Price}=req.body;
+        const {Name,Price,Image}=req.body;
         const AddNewSouse= new SouseDate({Name,Price,Image})
         await AddNewSouse.save();
         const NewSouseData= await SouseDate.find(); 
@@ -92,7 +92,7 @@ export async function Deletepissa(req,res) {
 
 export async function DeleteSouse(req,res) {
     try{
-        const Deletsouse = await SouseData.findByIdAndDelete(req.params.id);
+        const Deletsouse = await SouseDate.findByIdAndDelete(req.params.id);
       
         res.status(200).json({message:"deleted sucssesfully"})
 

@@ -13,7 +13,7 @@ AdminRequest.get('/orders',GetOrder);
  AdminRequest.post('/pissa',Addpissa);
  AdminRequest.post('/souse',AddSaouse);
   AdminRequest.delete('/dpissa:id',Deletepissa);
- AdminRequest.delete('/souse',DeleteSouse);
+ AdminRequest.delete('/souse:id',DeleteSouse);
    AdminRequest.get('/pissa', Allpissa);
    AdminRequest.get('/souse', AllSouse);
 

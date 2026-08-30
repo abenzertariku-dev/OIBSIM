@@ -63,3 +63,16 @@ try{
      res.status(500).json({message:"can not save the souse data"})
 }
 }
+// a function for delete order
+
+
+export async function DeleteOrder(req,res) {
+    try{
+        const Deletsored = await OrderData.findByIdAndDelete(req.params.id);
+      
+        res.status(200).json({message:"deleted sucssesfully"})
+
+    }catch(error){
+         res.status(500).json({message:"can not find the data"})
+    }
+}
