@@ -24,14 +24,8 @@ export default function Pissa(){
         <div className="flex ">
 
            {
-            pissa.map((item, index)=><div key={item._id} className="p-7 rounded-2xl shadow-amber-950">
-            
-            <h2>{item.Name}</h2>
-            <h3>{item.Price}ETB</h3>
-            <p>{item.Discription}</p>
-            <img src={item.Image} alt={item.Name} className="text-2xl w-9 h-12 rounded-2xl" />
-            </div>
-           
+            pissa.map((item, index)=>
+            <PissaCard item={item} /> 
             )
         }
         </div>
