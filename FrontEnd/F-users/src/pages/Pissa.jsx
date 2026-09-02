@@ -1,5 +1,8 @@
-import axios from "axios"
-import { useState,useEffect } from "react"
+import axios from "axios";
+import { useState,useEffect } from "react";
+import PizzaCard from "../omponents/pissacard.jsx";
+import Navbar from "../omponents/Heads.jsx";
+
 export default function Pissa(){
    
   const [pissa,Setpissa]=useState([])
@@ -18,14 +21,15 @@ export default function Pissa(){
       },[])
    
    return(
-        <>
-        <h1>this is the my pissa page </h1>
+        <><Navbar/>
 
         <div className="flex ">
 
            {
             pissa.map((item, index)=>
-            <PissaCard item={item} /> 
+          <div key={index} className="p-7 rounded-2xl shadow-amber-950">
+        <PizzaCard item={item} />
+          </div>
             )
         }
         </div>
