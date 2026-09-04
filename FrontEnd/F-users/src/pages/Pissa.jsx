@@ -16,15 +16,8 @@ export default function Pissa(){
         }catch (error) {
         console.log('Failed to load theme:', error);
       }
-      const FechSouse= async ()=>{
-        try{
-            const SouseData= await axios.get("http://localhost:5000/api/user/souse")
-            Setsouse(SouseData.data)
-        }catch (error) {
-        console.log('Failed to load theme:', error);
-      }
-
-    }; Fechdata();
+    
+    }; Fechdata(); 
       },[])
    
    return(
@@ -35,7 +28,7 @@ export default function Pissa(){
            {
             pissa.map((item, index)=>
           <div key={index} className="p-7 rounded-2xl shadow-amber-950">
-        <PizzaCard item={item,souse} />
+        <PizzaCard item={item} />
           </div>
             )
         }

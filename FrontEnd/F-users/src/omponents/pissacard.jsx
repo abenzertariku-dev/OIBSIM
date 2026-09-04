@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function PizzaCard({ item , souse}) {
+export default function PizzaCard({ item }) {
   // 1. Pop-up Visibility State
   const [isOpen, setIsOpen] = useState(false);
 

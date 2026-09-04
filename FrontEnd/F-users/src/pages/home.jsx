@@ -1,10 +1,10 @@
 import { BrowserRouter,Route,Routes,Link } from "react-router-dom"
-import Pissa from "./pissa.jsx"
+import Pissa from "./Pissa"
 import MyAccount from "./MAccount"
 import MyOrder from "./MyOrder"
 //import Navbar from "../omponents/Heads.jsx"
-import { IoMdPerson } from "react-icons/io";
-import { FaHome } from "react-icons/fa";
+//import { IoMdPerson } from "react-icons/io";
+//import { FaHome } from "react-icons/fa";
 export default function Home(){
     
     return(
@@ -12,9 +12,9 @@ export default function Home(){
         <div>
 
         <Routes>
-            <Route path="/" element={<Pissa/>} />
-             <Route path="/myaccount" element={<MyAccount/>} />
-              <Route path="/myorder" element={<MyOrder/>} />
+            <Route path="*" element={<Pissa/>} />
+             <Route path="home/myaccount" element={<MyAccount/>} />
+              <Route path="home/myorder" element={<MyOrder/>} />
         </Routes>
     
        

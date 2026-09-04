@@ -6,7 +6,7 @@ export const UsersRout=express.Router();
 
 
 
-UsersRout.get('/',GetUserData);
+UsersRout.post('/',GetUserData);
  UsersRout.post('/signup',SignUp);
  UsersRout.get('/pissa',Allpissa);
  UsersRout.get('/souse', AllSouse);
