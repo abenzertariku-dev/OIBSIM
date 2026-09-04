@@ -15,6 +15,9 @@ const OrderDataSchema = new mongoose.Schema({
     Adress:{
          type:String,
         require:true
+    },Souse:{
+        type:String,
+        require:true
     }
 },
 {timestamps:true})

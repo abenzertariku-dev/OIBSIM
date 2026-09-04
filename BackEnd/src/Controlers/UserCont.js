@@ -16,8 +16,8 @@ export async function GetUserData(req ,res) {
 
 export async function Orderpiza(req,res){
 try{
-const {Amount,Pissa,User,Adress}=req.body;
-const NewOrder=new OrderData({Amount,Pissa,User,Adress});
+const {Amount,Pissa,User,Adress,Souse}=req.body;
+const NewOrder=new OrderData({Amount,Pissa,User,Adress,Souse});
 
 await NewOrder.save();
 res.status(201).send({message:"order placed "})
