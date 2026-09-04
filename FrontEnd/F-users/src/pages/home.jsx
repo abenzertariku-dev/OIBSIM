@@ -8,11 +8,8 @@ import { FaHome } from "react-icons/fa";
 export default function Home(){
     
     return(
-
+        
         <div>
-
-
-
 
         <Routes>
             <Route path="/" element={<Pissa/>} />
