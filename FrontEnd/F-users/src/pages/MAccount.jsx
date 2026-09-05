@@ -1,6 +1,7 @@
 import Navbar from "../omponents/Heads.jsx"
 import { useEffect,useState } from "react";
 import axios from "axios";
+//import{ userdData} from "./login.jsx";
 export default function MyAccount(){
     const [user, setUser] = useState(null);
 
@@ -13,7 +14,8 @@ export default function MyAccount(){
     return(
         <>
         <Navbar/>
-        <h1> {user?.Name || 'Guest User'}</h1>
+        <h1> {userdData.Names || 'Guest User'}</h1>
+        <h1> {userdData.Emails || 'Guest Email'}</h1>
         </>
     )
 }
